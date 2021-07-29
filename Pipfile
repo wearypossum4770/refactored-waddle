@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+coverage = "*"
+pytest-django = "*"
+isort = "*"
+pytest-clarity = "*"
+pytest-asyncio = "*"
+pytest-emoji = "*"
+django-extensions = "*"
+django-coverage-plugin = "*"
+black = "*"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
