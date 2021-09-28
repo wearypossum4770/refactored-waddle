@@ -3,7 +3,7 @@ pub fn sort_sentence(sentence: &str) ->String{
     let re = Regex::new(r"(\w+)(\d+)").unwrap();
     let mut target: Vec<&str> = sentence.split(" ").collect();
     for capture in re.captures_iter(sentence){
-        let   location = capture[2].parse::<usize>().unwrap();
+        let location = capture[2].parse::<usize>().unwrap();
         target[location-1] = &capture.get(1).unwrap().as_str();
     }
     target.join(" ")
