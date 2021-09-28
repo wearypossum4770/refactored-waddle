@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-refactored-waddle"
+version = "0.1.0"
+description = ""
+authors = ["Stephen Smith <wearypossum4770@yahoo.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^2.12.0"
+coverage = "^5.5"
+pytest-django = "^4.2.0"
+black = "^21.5b1"
+isort = "^5.8.0"
+pytest-clarity = "^0.3.0-alpha.0"
+pytest-asyncio = "^0.15.1"
+pytest-emoji = "^0.2.0"
+django-coverage-plugin = "^1.8.0"
+django-extensions = "^3.1.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
