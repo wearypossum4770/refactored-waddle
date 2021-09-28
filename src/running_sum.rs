@@ -2,9 +2,9 @@
 pub fn running_sum(nums: &[u32]) -> Vec<u32> {
     let mut array = nums.to_vec();
     let mut target: Vec<u32> = Vec::with_capacity(nums.len());
-    if array.len() > 0 {
+    if !array.is_empty() {
         for _num in nums.iter() {
-            let sum = array.iter().fold(0, |acc, x| acc + x);
+            let sum = array.iter().sum();
             target.insert(0, sum);
             array.pop();
         }
