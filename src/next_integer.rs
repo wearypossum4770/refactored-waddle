@@ -1,7 +1,7 @@
 /// copyright https://edabit.com/challenge/NAQhEoxbofPidLxm9
-pub fn next_integer(x:i32)->i32{
-let next: i32 = x+1;
-next
+pub fn next_integer(x: i32) -> i32 {
+    let next: i32 = x + 1;
+    next
 }
 #[cfg(test)]
 mod tests {

@@ -1,2 +1,2 @@
-def merge_two_lists(l1,l2):
+def merge_two_lists(l1, l2):
     ...

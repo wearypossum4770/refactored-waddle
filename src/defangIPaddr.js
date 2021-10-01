@@ -1,3 +1,3 @@
 export default function defangIPaddr(address) {
-    return address.replace(/\./g,"[.]")
+  return address.replace(/\./g, "[.]");
 }

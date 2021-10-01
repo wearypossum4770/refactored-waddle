@@ -1,7 +1,7 @@
-/// copyright https://edabit.com/challenge/8q54MKnRrm89pSLmW 
-pub fn convert_minutes_to_seconds(minutes:i32)-> i32{
-let seconds: i32 = minutes*60;
-seconds
+/// copyright https://edabit.com/challenge/8q54MKnRrm89pSLmW
+pub fn convert_minutes_to_seconds(minutes: i32) -> i32 {
+    let seconds: i32 = minutes * 60;
+    seconds
 }
 #[cfg(test)]
 mod tests {

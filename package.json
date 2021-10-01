@@ -12,7 +12,6 @@
   "contributors": [
     "Stephen Smith <wearypossum4770@yahoo.com>"
   ],
-  "license": "MIT",
   "keywords": [
     "wearypossum4770"
   ],
@@ -26,6 +25,9 @@
     "new": "node ./cleaner.js && node ./new_module.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
     "@prettier/plugin-xml": "^0.13.0",
     "@storybook/addon-actions": "^6.1.21",
     "@storybook/addon-essentials": "^6.1.21",
@@ -40,7 +42,7 @@
     "prettier-plugin-java": "^1.0.1",
     "prettier-plugin-sh": "^0.6.0",
     "prettier-plugin-toml": "^0.3.1",
-    "prompts": "^2.4.0",
+    "prompts": "^2.4.1",
     "yo": "^3.1.1"
   },
   "dependencies": {

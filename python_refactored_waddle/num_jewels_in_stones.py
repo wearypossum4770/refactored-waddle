@@ -5,12 +5,15 @@ def num_jewels_in_stones(jewels, stones):
     """
     source:https://leetcode.com/problems/jewels-and-stones/submissions/
     """
-    return sum(len(
+    return sum(
+        len(
             findall(
                 jewel,
                 stones,
             )
-        ) for jewel in jewels)
+        )
+        for jewel in jewels
+    )
 
 
 print(num_jewels_in_stones("aA", "aAAbbbb"))
