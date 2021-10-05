@@ -42,14 +42,24 @@ class LinkedList {
     return lastNode;
   }
 }
-export default function mergeTwoLists(l1, l2) {
+/**
+ *
+ * @param {Array<number>} l1
+ * @param {Array<number>} l2
+ * @returns
+ */
+function setUpTest(array1, array2) {
   let node1 = new LinkedList();
-  let node2 = new LinkedList();
-  l1.forEach((num) => node1.add(num));
-  l2.forEach((num) => node2.add(num));
-  console.log(node1);
-  console.log(node2);
+  for (let i = 0; i < array1.length; i++) {
+    node1.add(array1[i]);
+    node1.add(array2[i]);
+  }
   return node1;
+}
+export function mergeTwoLists(l1, l2) {
+  let array = setUpTest(l1, l2);
+  let target = Array(array.size);
+  return target;
 }
 
 console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));

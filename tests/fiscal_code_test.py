@@ -28,5 +28,5 @@ from python_refactored_waddle.fiscal_code import fiscal_code
         ),
     ],
 )
-def test_eval(test_input, expected):
+def test_fiscal_code(test_input, expected):
     return fiscal_code(*test_input) == expected

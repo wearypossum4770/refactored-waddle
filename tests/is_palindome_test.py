@@ -11,5 +11,5 @@ from python_refactored_waddle.is_palindrome import is_palindrome
         (10, False),
     ],
 )
-def test_eval(test_input, expected):
+def test_is_palindrome(test_input, expected):
     return is_palindrome(test_input) == expected
