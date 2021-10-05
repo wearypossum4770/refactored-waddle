@@ -1,7 +1,18 @@
 #-----------------------------------------------------------------------
+# SWIFT IGNORE
+#-----------------------------------------------------------------------
+
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+#-----------------------------------------------------------------------
 # PYTHON IGNORE
 #-----------------------------------------------------------------------
-.DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
