@@ -11,5 +11,5 @@ from python_refactored_waddle.circuit_power import circuit_power
         ((480, 20), 9600),
     ],
 )
-def test_eval(test_input, expected):
+def test_circuit_power(test_input, expected):
     return circuit_power(*test_input) == expected

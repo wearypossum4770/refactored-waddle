@@ -24,5 +24,5 @@ from python_refactored_waddle.remove_leading_trailing import remove_leading_trai
         ("00200.1900001", "200.1900001"),
     ],
 )
-def test_eval(test_input, expected):
+def test_remove_leading_trailing(test_input, expected):
     return remove_leading_trailing(test_input) == expected

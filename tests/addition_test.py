@@ -12,5 +12,5 @@ from python_refactored_waddle.addition import addition
         ((88, 2), 90),
     ],
 )
-def test_eval(test_input, expected):
+def test_addition(test_input, expected):
     return addition(*test_input) == expected

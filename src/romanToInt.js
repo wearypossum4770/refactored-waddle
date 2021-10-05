@@ -13,8 +13,8 @@ let numeralsToInteger = {
  * @id 13
  * @runtime  214 ms, faster than 29.86% of JavaScript online submissions for Roman to Integer.
  * @memory_usage  44.9 MB, less than 59.78% of JavaScript online submissions for Roman to Integer.
- * @param {string} roman 
- * @returns 
+ * @param {string} roman
+ * @returns
  */
 export default function romanToInt(roman) {
   let integer = 0,
