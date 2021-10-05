@@ -1,2 +1,2 @@
-def sort_sentence (sentence):
+def sort_sentence(sentence):
     ...

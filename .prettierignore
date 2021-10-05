@@ -1,3 +1,5 @@
+vendor/
+php.ini
 # Ignore artifacts:
 build
 coverage

@@ -1,0 +1,1 @@
+poetry run ptw --onpass "say passed" --onfail "say failed" & yarn test && cargo test
