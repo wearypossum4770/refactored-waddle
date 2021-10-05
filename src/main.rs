@@ -1,11 +1,12 @@
 use crate::addition::addition;
 use crate::calc_age::calc_age;
-use crate::hello::hello;
 use crate::circuit_power::circuit_power;
+use crate::comp::comp;
 use crate::convert_minutes_to_seconds::convert_minutes_to_seconds;
 use crate::count_matches::count_matches;
 use crate::defang_ip_addr::defang_ip_addr;
 use crate::give_me_something::give_me_something;
+use crate::hello::hello;
 use crate::increment::increment;
 use crate::is_palindrome::is_palindrome;
 use crate::kids_with_candies::kids_with_candies;
@@ -17,15 +18,15 @@ use crate::running_sum::running_sum;
 use crate::shuffle::shuffle;
 use crate::sort_array_by_parity_ii::sort_array_by_parity_ii;
 use crate::sort_sentence::sort_sentence;
-use crate::comp::comp;
 mod addition;
 mod calc_age;
-mod hello;
 mod circuit_power;
+mod comp;
 mod convert_minutes_to_seconds;
 mod count_matches;
 mod defang_ip_addr;
 mod give_me_something;
+mod hello;
 mod increment;
 mod is_palindrome;
 mod kids_with_candies;
@@ -37,11 +38,8 @@ mod running_sum;
 mod shuffle;
 mod sort_array_by_parity_ii;
 mod sort_sentence;
-mod comp;
 fn main() {
-
-    let vec_bool = vec![
-        comp("AB", "CD"),is_palindrome(-121), less_than_100(2, 3)];
+    let vec_bool = vec![comp("AB", "CD"), is_palindrome(-121), less_than_100(2, 3)];
     let vec_i32 = vec![
         circuit_power(2, 2),
         next_integer(2),
