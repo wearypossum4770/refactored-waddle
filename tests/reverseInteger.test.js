@@ -1,0 +1,1 @@
+import reverseInteger from '../src/reverseInteger.js'
