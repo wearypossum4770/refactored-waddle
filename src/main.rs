@@ -1,3 +1,4 @@
+use crate::reverse_array::reverse_array;
 use crate::addition::addition;
 use crate::calc_age::calc_age;
 use crate::reverse_integer::reverse_integer;
@@ -22,6 +23,7 @@ use crate::shuffle::shuffle;
 use crate::sort_array_by_parity_ii::sort_array_by_parity_ii;
 use crate::sort_sentence::sort_sentence;
 mod reverse_integer;
+mod reverse_array;
 mod addition;
 mod calc_age;
 mod circuit_power;
@@ -48,6 +50,7 @@ fn main() {
     let vec_bool = vec![comp("AB", "CD"), is_palindrome(-121), less_than_100(2, 3)];
     let vec_i32 = vec![
         // climb_stairs(4),
+        reverse_integer(0),
         circuit_power(2, 2),
         next_integer(2),
         increment(2),
@@ -58,7 +61,7 @@ fn main() {
     let vec_u8 = vec![maximum_wealth(vec![vec![1, 2, 3], vec![3, 2, 1]])];
     let vec_u32 = vec![calc_age(1)];
     let vec_vector_i32 = vec![
-        reverse_integer(0),
+        reverse_array(&[]),
         sort_array_by_parity_ii(vec![2, 3]),
         shuffle(vec![2, 5, 1, 3, 4, 7], 3),
     ];
