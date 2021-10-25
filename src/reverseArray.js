@@ -1,3 +1,1 @@
-export default function reverseArray(){
-    
-}
+export default function reverseArray() {}

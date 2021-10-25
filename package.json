@@ -12,6 +12,7 @@
   "contributors": [
     "Stephen Smith <wearypossum4770@yahoo.com>"
   ],
+  "workspaces": ["hacker_rank_node_certification"],
   "keywords": [
     "wearypossum4770"
   ],
