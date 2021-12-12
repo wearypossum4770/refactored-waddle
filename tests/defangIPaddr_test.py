@@ -1,4 +1,5 @@
 import pytest
+
 from python_refactored_waddle.defangIPaddr import defangIPaddr
 
 

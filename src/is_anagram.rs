@@ -1,0 +1,1 @@
+pub fn is_anagram(string1:&str, string2:&str){}

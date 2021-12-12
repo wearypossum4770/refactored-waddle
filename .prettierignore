@@ -1,5 +1,6 @@
 # Ignore artifacts:
 build
+*.venv
 coverage
 # Ignore rust lang target:
 target

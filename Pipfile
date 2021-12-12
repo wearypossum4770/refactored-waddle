@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+six = "*"
+pytest-watch = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+isort = "*"
+pytest-asyncio = "*"
+pytest-clarity = "*"
+pytest-emoji = "*"
+black = "*"
+lark = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
+
+[dev-packages.coverage]
+extras = [ "toml",]
