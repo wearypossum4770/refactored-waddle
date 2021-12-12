@@ -1,0 +1,346 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<swift_challenges-debug.module>"]
+  "swift_challenges-debug.module": ["<swift_challenges-debug.module>"]
+  "swift_challengesPackageTests-debug.module":
+    ["<swift_challengesPackageTests-debug.module>"]
+  "swift_challengesPackageTests-debug.test":
+    ["<swift_challengesPackageTests-debug.test>"]
+  "swift_challengesTests-debug.module": ["<swift_challengesTests-debug.module>"]
+  "test":
+    [
+      "<swift_challenges-debug.module>",
+      "<swift_challengesPackageTests-debug.test>",
+      "<swift_challengesTests-debug.module>",
+    ]
+default: "main"
+nodes:
+  "/home/steve/refactored-waddle/swift_challenges/Sources/swift_challenges/":
+    is-directory-structure: true
+  "/home/steve/refactored-waddle/swift_challenges/Tests/swift_challengesTests/":
+    is-directory-structure: true
+commands:
+  ? "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swiftmodule.o"
+  : tool: shell
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swiftmodule.o",
+      ]
+    description: "Wrapping AST for swift_challenges for debugging"
+    args:
+      [
+        "/home/steve/.swift/usr/bin/swiftc",
+        "-modulewrap",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule",
+        "-o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swiftmodule.o",
+        "-target",
+        "x86_64-unknown-linux-gnu",
+      ]
+
+  ? "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule.o"
+  : tool: shell
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule.o",
+      ]
+    description: "Wrapping AST for swift_challengesPackageTests for debugging"
+    args:
+      [
+        "/home/steve/.swift/usr/bin/swiftc",
+        "-modulewrap",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule",
+        "-o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule.o",
+        "-target",
+        "x86_64-unknown-linux-gnu",
+      ]
+
+  ? "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/main.swift"
+  : tool: test-discovery-tool
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swift.o",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/main.swift",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/swift_challengesTests.swift",
+      ]
+
+  ? "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swiftmodule.o"
+  : tool: shell
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swiftmodule.o",
+      ]
+    description: "Wrapping AST for swift_challengesTests for debugging"
+    args:
+      [
+        "/home/steve/.swift/usr/bin/swiftc",
+        "-modulewrap",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule",
+        "-o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swiftmodule.o",
+        "-target",
+        "x86_64-unknown-linux-gnu",
+      ]
+
+  "<swift_challenges-debug.module>":
+    tool: phony
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule",
+      ]
+    outputs: ["<swift_challenges-debug.module>"]
+
+  "<swift_challengesPackageTests-debug.module>":
+    tool: phony
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/main.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule",
+      ]
+    outputs: ["<swift_challengesPackageTests-debug.module>"]
+
+  "<swift_challengesPackageTests-debug.test>":
+    tool: phony
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.xctest",
+      ]
+    outputs: ["<swift_challengesPackageTests-debug.test>"]
+
+  "<swift_challengesTests-debug.module>":
+    tool: phony
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule",
+      ]
+    outputs: ["<swift_challengesTests-debug.module>"]
+
+  "C.swift_challenges-debug.module":
+    tool: swift-compiler
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/Sources/swift_challenges/swift_challenges.swift",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule",
+      ]
+    executable: "/home/steve/.swift/usr/bin/swiftc"
+    module-name: "swift_challenges"
+    module-output-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule"
+    import-paths:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug",
+      ]
+    temps-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build"
+    objects:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swift.o",
+      ]
+    other-args:
+      [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics",
+      ]
+    sources:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/Sources/swift_challenges/swift_challenges.swift",
+      ]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.swift_challengesPackageTests-debug.module":
+    tool: swift-compiler
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/main.swift",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/swift_challengesTests.swift",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/main.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule",
+      ]
+    executable: "/home/steve/.swift/usr/bin/swiftc"
+    module-name: "swift_challengesPackageTests"
+    module-output-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule"
+    import-paths:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug",
+      ]
+    temps-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build"
+    objects:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/main.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesTests.swift.o",
+      ]
+    other-args:
+      [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics",
+      ]
+    sources:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/main.swift",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.derived/swift_challengesTests.swift",
+      ]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.swift_challengesPackageTests-debug.test":
+    tool: shell
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.build/swift_challenges.swiftmodule.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/main.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesPackageTests.swiftmodule.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swiftmodule.o",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.xctest",
+      ]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.xctest"
+    args:
+      [
+        "/home/steve/.swift/usr/bin/swiftc",
+        "-L",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug",
+        "-o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.xctest",
+        "-module-name",
+        "swift_challengesPackageTests",
+        "-emit-executable",
+        "-Xlinker",
+        "-rpath=$ORIGIN",
+        "@/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesPackageTests.product/Objects.LinkFileList",
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-L",
+        "/home/steve/.swift/usr/lib",
+      ]
+
+  "C.swift_challengesTests-debug.module":
+    tool: swift-compiler
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/Tests/swift_challengesTests/swift_challengesTests.swift",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challenges.swiftmodule",
+      ]
+    outputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swift.o",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule",
+      ]
+    executable: "/home/steve/.swift/usr/bin/swiftc"
+    module-name: "swift_challengesTests"
+    module-output-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.swiftmodule"
+    import-paths:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug",
+      ]
+    temps-path: "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build"
+    objects:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/swift_challengesTests.build/swift_challengesTests.swift.o",
+      ]
+    other-args:
+      [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/steve/refactored-waddle/swift_challenges/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics",
+      ]
+    sources:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/Tests/swift_challengesTests/swift_challengesTests.swift",
+      ]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs:
+      [
+        "/home/steve/refactored-waddle/swift_challenges/Sources/swift_challenges/",
+        "/home/steve/refactored-waddle/swift_challenges/Tests/swift_challengesTests/",
+        "/home/steve/refactored-waddle/swift_challenges/Package.swift",
+        "/home/steve/refactored-waddle/swift_challenges/Package.resolved",
+      ]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
