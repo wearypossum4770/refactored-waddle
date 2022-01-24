@@ -1,8 +1,8 @@
-use crate::reverse_array::reverse_array;
 use crate::addition::addition;
 use crate::calc_age::calc_age;
-use crate::reverse_integer::reverse_integer;
 use crate::circuit_power::circuit_power;
+use crate::reverse_array::reverse_array;
+use crate::reverse_integer::reverse_integer;
 // use crate::climb_stairs::climb_stairs;
 use crate::comp::comp;
 use crate::convert_minutes_to_seconds::convert_minutes_to_seconds;
@@ -13,6 +13,7 @@ use crate::give_me_something::give_me_something;
 use crate::hello::hello;
 use crate::increment::increment;
 use crate::is_palindrome::is_palindrome;
+use crate::jumping_on_clouds::jumping_on_clouds;
 use crate::kids_with_candies::kids_with_candies;
 use crate::less_than_100::less_than_100;
 use crate::maximum_wealth::maximum_wealth;
@@ -22,11 +23,11 @@ use crate::running_sum::running_sum;
 use crate::shuffle::shuffle;
 use crate::sort_array_by_parity_ii::sort_array_by_parity_ii;
 use crate::sort_sentence::sort_sentence;
-mod reverse_integer;
-mod reverse_array;
 mod addition;
 mod calc_age;
 mod circuit_power;
+mod reverse_array;
+mod reverse_integer;
 // mod climb_stairs;
 mod comp;
 mod convert_minutes_to_seconds;
@@ -37,6 +38,7 @@ mod give_me_something;
 mod hello;
 mod increment;
 mod is_palindrome;
+mod jumping_on_clouds;
 mod kids_with_candies;
 mod less_than_100;
 mod maximum_wealth;
@@ -50,6 +52,7 @@ fn main() {
     let vec_bool = vec![comp("AB", "CD"), is_palindrome(-121), less_than_100(2, 3)];
     let vec_i32 = vec![
         // climb_stairs(4),
+        jumping_on_clouds(&[0]),
         reverse_integer(0),
         circuit_power(2, 2),
         next_integer(2),
